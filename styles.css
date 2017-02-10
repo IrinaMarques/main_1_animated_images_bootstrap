@@ -1,0 +1,110 @@
+body {
+	margin: 10px;
+	font-family: "Lucida Bright",Georgia,serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.container-fluid {
+	width: 100%; /* occupy the width of all the page */
+	padding: 0; /* reset the styles from bootstrap */
+}
+
+.col-sm-6, .col-sm-4 {
+	padding: 0; /* reset the styles from bootstrap */
+	position: relative; /*this one fixed*/
+}
+
+.row {
+	margin: 0; /*reset styles from bootstrap */
+	width: 100%;
+}
+
+.row:first-child {
+	padding-top: 100px;
+}
+
+.row:last-child {
+	padding-bottom: 100px;
+}
+
+
+.hover-container { /* this place the text*/
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	transition: background-color .5s ease-in-out;
+	background-color: transparent;
+}
+
+ .hover-container hr {
+	display: block;
+	font-size: 10px;
+	color: #fff;
+	width: 0%;
+}
+
+.hover-container:hover hr {
+	width: 50%;
+}
+
+.hover-container h2, h4, hr {
+	color: #fff;
+}
+
+hr {
+	border-top: 2px solid #eee;
+    transition: all .6s linear;
+}
+
+.hover-content {
+	position: relative;
+	text-align: center;
+	top: 50%;
+/*
+	transform: translateY(-50%);
+	background-color: transparent;*/
+}
+
+h2 {
+	display: block;
+	text-transform: uppercase;
+	font-size: 3em;
+	margin: 0;
+}
+
+.hover-container:hover { /*makes the container darker*/
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*animation zoom in */
+.img { /* time for zoom in image */
+	-webkit-transition: all .6s linear;
+    -moz-transition: all .6s linear;
+    -o-transition: all .6s linear;
+    -ms-transition: all .6s linear;
+    transition: all .6s linear;
+}
+
+.hover:hover img { /* amount of scale the image */
+	-webkit-transform: scale(1.30,1.30);
+    -moz-transform: scale(1.30,1.30);
+    -o-transform: scale(1.30,1.30);
+    -ms-transform: scale(1.30,1.30);
+    transform: scale(1.30,1.30);
+}
+
+.hover { /* don't overflow the border*/
+	overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+	.col-md-6 {
+    width: 50%;
+}
+}
